@@ -1,0 +1,29 @@
+Amit Pegu@Sweetzaline MINGW64 ~/Bridgelabz554/Day1
+$ touch WhatWeLearntOnDay1?.txt
+
+Amit Pegu@Sweetzaline MINGW64 ~/Bridgelabz554/Day1
+$ nano WhatWeLearntOnDay1\?.txt
+
+Amit Pegu@Sweetzaline MINGW64 ~/Bridgelabz554/Day1
+$ cat WhatWeLearntOnDay1\?.txt
+Hi Friends!
+
+Greetings for the Day1!
+
+So these are the following Terminal-Command Topics that we learnt today:
+
+1. pwd- In which Repository we are currently
+2. mkdir- Creates Repository
+3. touch- Creates a File
+4. cd- Enter a Repository
+5. cp- Copies a File to another Repository
+6. mv- Moves/ Cut0Paste a file to another place
+7. ls- Lists all the files in the current Repository
+8. ls -a -Lists all the files in the current Repository, including the Hidden Files.
+9. ls -l -Lists all the files in the current Repository, in a detailed format.
+10. ls -l -Lists all the files in the current Repository, including the hidden files, in a detailed format.
+11. nano- Opens a shell-script file, example- abc.sh files in the nano editor
+12. cat- Displays the Printed-Output written in the shell-script file, in the git window.
+
+Thanks!
+
