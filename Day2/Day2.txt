@@ -1,0 +1,130 @@
+Amit Pegu@Sweetzaline MINGW64 ~/Documents/Day2
+$ ls
+
+Amit Pegu@Sweetzaline MINGW64 ~/Documents/Day2
+$ git clone https://github.com/edurekavivekh/linux-content.git
+Cloning into 'linux-content'...
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 9 (delta 0), reused 7 (delta 0), pack-reused 1
+Receiving objects: 100% (9/9), 12.22 MiB | 2.49 MiB/s, done.
+
+Amit Pegu@Sweetzaline MINGW64 ~/Documents/Day2
+$ ls
+linux-content/
+
+Amit Pegu@Sweetzaline MINGW64 ~/Documents/Day2
+$ cd linux-content/
+
+Amit Pegu@Sweetzaline MINGW64 ~/Documents/Day2/linux-content (master)
+$ ls
+README.md  access.log  data.csv  linux_chit_sheet.pdf  linux_problem_sheet.pdf
+
+Amit Pegu@Sweetzaline MINGW64 ~/Documents/Day2/linux-content (master)
+$ cat data.csv
+Id EmployeeName JobTitle        BasePay OvertimePay OtherPay TotalPay TotalPayBenefits
+1  NATHANIEL    GM              167411  0           400184   567595   567595
+2  GARY         CAPTAIN         155966  245131      137811   538909   538909
+3  ALBERT       CAPTAIN         212739  106088      16452    335279   335279
+4  CHRISTOPHER  MECHANIC        77916   56120       198306   332343   332343
+5  PATRICK      DEPUTYCHIEF     134401  9737        182234   326373   326373
+6  DAVID        ASSTDEPUTY      118602  8601        189082   316285   316285
+7  ALSON        BATTALIONCHIEF  92492   89062       134426   315981   315981
+8  DAVID        DEPUTYDIRECTOR  256576  0           51322    307899   307899
+10 JOANNE       CHIEF           285262  0           17115    302377   302377
+12 PATRICIA     CAPTAIN         99722   87082       110804   297608   297608
+13 EDWARD       EXECUTIVE       294580  0           0        294580   294580
+
+Amit Pegu@Sweetzaline MINGW64 ~/Documents/Day2/linux-content (master)
+$ nano data.csv
+
+Amit Pegu@Sweetzaline MINGW64 ~/Documents/Day2/linux-content (master)
+$ cat data.csv
+Id EmployeeName JobTitle        BasePay OvertimePay OtherPay TotalPay TotalPayBenefits
+1  NATHANIEL    GM              167411  0           400184   567595   567595
+2  GARY         CAPTAIN         155966  245131      137811   538909   538909
+3  ALBERT       CAPTAIN         212739  106088      16452    335279   335279
+4  CHRISTOPHER  MECHANIC        77916   56120       198306   332343   332343
+5  PATRICK      DEPUTYCHIEF     134401  9737        182234   326373   326373
+6  DAVID        ASSTDEPUTY      118602  8601        189082   316285   316285
+7  ALSON        BATTALIONCHIEF  92492   89062       134426   315981   315981
+8  DAVID        DEPUTYDIRECTOR  256576  0           51322    307899   307899
+10 JOANNE       CHIEF           285262  0           17115    302377   302377
+12 PATRICIA     CAPTAIN         99722   87082       110804   297608   297608
+13 EDWARD       EXECUTIVE       294580  0           0        294580   294580
+14 PAUL         DEVELOPER       100000  0           0        100000   100000
+15 FOXY         DEVELOPER       200000  0           0        200000   200000
+16 POOJA        TESTER          26000   1000        1000     28000    28000
+17 POOJA        DEVELOPER       45000   4000        0        49000    49000
+
+Amit Pegu@Sweetzaline MINGW64 ~/Documents/Day2/linux-content (master)
+$ grep DEVELOPER data.csv
+14 PAUL         DEVELOPER       100000  0           0        100000   100000
+15 FOXY         DEVELOPER       200000  0           0        200000   200000
+17 POOJA        DEVELOPER       45000   4000        0        49000    49000
+
+Amit Pegu@Sweetzaline MINGW64 ~/Documents/Day2/linux-content (master)
+$ cat data.csv | grep POOJA
+16 POOJA        TESTER          26000   1000        1000     28000    28000
+17 POOJA        DEVELOPER       45000   4000        0        49000    49000
+
+Amit Pegu@Sweetzaline MINGW64 ~/Documents/Day2/linux-content (master)
+$ grep DEVELOPER data.csv | grep POOJA
+17 POOJA        DEVELOPER       45000   4000        0        49000    49000
+
+Amit Pegu@Sweetzaline MINGW64 ~/Documents/Day2/linux-content (master)
+$ cat data.csv | grep POOJA | grep TESTER
+16 POOJA        TESTER          26000   1000        1000     28000    28000
+
+Amit Pegu@Sweetzaline MINGW64 ~/Documents/Day2/linux-content (master)
+$ echo Hello All
+Hello All
+
+Amit Pegu@Sweetzaline MINGW64 ~/Documents/Day2/linux-content (master)
+$ echo Hello All | awk '{ print $0 }'
+Hello All
+
+Amit Pegu@Sweetzaline MINGW64 ~/Documents/Day2/linux-content (master)
+$ echo Hello All | awk '{ print $1 }'
+Hello
+
+Amit Pegu@Sweetzaline MINGW64 ~/Documents/Day2/linux-content (master)
+$ echo Hello All | awk '{ print $2 }'
+All
+
+Amit Pegu@Sweetzaline MINGW64 ~/Documents/Day2/linux-content (master)
+$ echo Hello All | awk '{ print $3 }'
+
+
+Amit Pegu@Sweetzaline MINGW64 ~/Documents/Day2/linux-content (master)
+$ echo Hello All! How are you all? | awk '{ print $0 }'
+Hello All! How are you all?
+
+Amit Pegu@Sweetzaline MINGW64 ~/Documents/Day2/linux-content (master)
+$ echo Hello All! How are you all? | awk '{ $2="Madam." } { $3="We" } { $5="Good!" } { $6="" } { print $0 }'
+Hello Madam. We are Good!
+
+Amit Pegu@Sweetzaline MINGW64 ~/Documents/Day2/linux-content (master)
+$ cat data.csv | grep POOJA | awk '{ print "Myself " $2 }'
+Myself POOJA
+Myself POOJA
+
+Amit Pegu@Sweetzaline MINGW64 ~/Documents/Day2/linux-content (master)
+$ cat data.csv | grep POOJA | awk '{ print "Myself " $2 ". My Salary is " $8 }'
+Myself POOJA. My Salary is 28000
+Myself POOJA. My Salary is 49000
+
+Amit Pegu@Sweetzaline MINGW64 ~/Documents/Day2/linux-content (master)
+$ touch simpleprogram.sh
+
+Amit Pegu@Sweetzaline MINGW64 ~/Documents/Day2/linux-content (master)
+$ nano simpleprogram.sh
+
+Amit Pegu@Sweetzaline MINGW64 ~/Documents/Day2/linux-content (master)
+$ bash simpleprogram.sh
+Final Salary including incentives is: 1500
+Initial Salary was:  500
+
+Amit Pegu@Sweetzaline MINGW64 ~/Documents/Day2/linux-content (master)
+$ touch .env
